@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   def index
     @movies = Movie.all
     render json: {
-      message: "ok",
+      message: "success",
       movies: @movies
     }
   end
