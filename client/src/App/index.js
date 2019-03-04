@@ -1,6 +1,8 @@
 import React, { Component } from "react"
+import { Switch, Route } from "react-router-dom"
 
 import MoviesList from '../MoviesList/MoviesList'
+import CreateMoviePage from "../CreateMoviePage/CreateMoviePage"
 
 import axios from 'axios'
 
@@ -39,7 +41,17 @@ class App extends Component {
 
     return (
       <div className="App">
-        <MoviesList movies={this.state.apiData} />
+        <Switch>
+          <Route
+            exact path="/"
+            render={() => <MoviesList
+            movies={this.state.apiData} />}
+          />
+          <Route
+            path="/create-movie"
+            component={CreateMoviePage}
+          />
+        </Switch>
       </div>
     )
 

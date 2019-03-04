@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   # get 'movies/show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :movies
+  # resources :movies, only: [:index, :create, :destroy, :update]
 end
