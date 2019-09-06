@@ -53,50 +53,60 @@ class CreateMoviePage extends Component  {
 
   render() {
     return (
-      <form onChange={ this.onMovieFormChange } onSubmit={ this.onMovieFormSubmit }>
-        <h2>Create Movie Form</h2>
-        <div>
-          <label htmlFor="title">Movie Title: </label>
-          <input
-            type="text"
-            name="title"
-            placeholder="Movie Title"
-            value={this.state.title}
-          />
+      <div class="columns">
+        <div class="column is-one-third"></div>
+        <div class="column is-one-third">
+          <form onChange={ this.onMovieFormChange } onSubmit={ this.onMovieFormSubmit }>
+            <h2>Create Movie Form</h2>
+            <div className="field">
+              <label className="label" htmlFor="title">Movie Title: </label>
+              <input
+                className="input"
+                type="text"
+                name="title"
+                placeholder="e.g. Star Wars"
+                value={this.state.title}
+              />
+            </div>
+            <div className="field">
+              <label className="label" htmlFor="director">Movie Director: </label>
+              <input
+                className="input"
+                type="text"
+                name="director"
+                placeholder="e.g. George Lucas"
+                value={this.state.director}
+              />
+            </div>
+            <div className="field">
+              <label className="label" htmlFor="year">Movie Year: </label>
+              <input
+                className="input"
+                type="text"
+                name="year"
+                placeholder="e.g. 1970"
+                value={this.state.year}
+              />
+            </div>
+            <div className="field">
+              <label className="label" htmlFor="plot">Movie Plot: </label>
+              <input
+                className="input"
+                type="text"
+                name="plot"
+                placeholder="e.g. Help me Obie Wan Kanobi"
+                value={this.state.plot}
+              />
+            </div>
+            <div>
+              <button
+                type="submit"
+                className="button">Add Movie</button>
+            </div>
+          </form>
         </div>
-        <div>
-          <label htmlFor="director">Movie Director: </label>
-          <input
-            type="text"
-            name="director"
-            placeholder="Movie Director"
-            value={this.state.director}
-          />
-        </div>
-        <div>
-          <label htmlFor="year">Movie Year: </label>
-          <input
-            type="text"
-            name="year"
-            placeholder="Movie Year"
-            value={this.state.year}
-          />
-        </div>
-        <div>
-          <label htmlFor="plot">Movie Plot: </label>
-          <input
-            type="text"
-            name="plot"
-            placeholder="Movie plot"
-            value={this.state.plot}
-          />
-        </div>
-        <div>
-          <button
-            type="submit"
-            className="button">Add Movie</button>
-        </div>
-      </form>
+        <div class="column is-one-third"></div>
+      </div>
     )
   }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Navbar = () => {
   return(
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-dark" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item" href="#">
           <img src="https://image.flaticon.com/icons/png/512/83/83519.png" alt="" />
@@ -13,6 +13,18 @@ const Navbar = () => {
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">
+            Home
+          </a>
+
+          <a class="navbar-item">
+            Create Movie
+          </a>
+        </div>
       </div>
     </nav>
   )
