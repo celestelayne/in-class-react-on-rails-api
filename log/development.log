@@ -1112,3 +1112,80 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 2.5ms)
 
 
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:01:39 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (2.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 149ms (Views: 140.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:01:41 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 226ms (Views: 222.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:01:58 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:02:49 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:02:55 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (2.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 10ms (Views: 7.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:05:35 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 134ms (Views: 121.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:06:44 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:07:24 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:08:35 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 72ms (Views: 50.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:08:59 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:11:21 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (2.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 152ms (Views: 138.8ms | ActiveRecord: 2.9ms)
+
+

@@ -1,10 +1,10 @@
 import React, { Component } from "react"
 import { Switch, Route } from "react-router-dom"
 
-import MoviesList from '../MoviesList/MoviesList'
+import MoviesList from "../MoviesList/MoviesList"
 import CreateMoviePage from "../CreateMoviePage/CreateMoviePage"
 
-import axios from 'axios'
+import axios from "axios"
 
 class App extends Component {
 
@@ -37,10 +37,10 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state)
+    console.log(this.state.apiData)
 
     return (
-      <div className="App">
+      <div className="container App">
         <Switch>
           <Route
             exact path="/"
