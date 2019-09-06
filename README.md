@@ -2,6 +2,8 @@
 
 ![react rails movies](react-rails-screenshot.png)
 
+The Full Stack Movie App is a single page application that uses [The Open Movie Database API](http://www.omdbapi.com/) as a template for the hard coded data in the database. Alternatively, this application can utilize the external API to request movie data. Either way, the  client side application will be served by a back-end which will have the ability to persist data.
+
 ## Instructions
 
 - Fork and clone **this repo**
