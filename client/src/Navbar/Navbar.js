@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <a className="navbar-item" href="#">
-          <img src="https://image.flaticon.com/icons/png/512/83/83519.png" alt="Bulma: Free, open source, & modern CSS framework based on Flexbox" />
+          <img src="https://image.flaticon.com/icons/png/512/83/83519.png" alt="" />
         </a>
 
         <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false">

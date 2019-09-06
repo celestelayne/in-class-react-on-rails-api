@@ -1,6 +1,6 @@
 # React on Rails | Full Stack Movie App
 
-
+![react rails movies](react-rails-screenshot.png)
 
 ## Instructions
 
