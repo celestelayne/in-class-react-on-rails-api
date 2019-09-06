@@ -1,7 +1,6 @@
-# React on Rails | Movies App
+# React on Rails | Full Stack Movie App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+
 
 ## Instructions
 
@@ -12,7 +11,7 @@ application up and running.
 - Seed the database, `rails db:seed`
 - Navigate to the client directory and run `npm install` to set up the React application
 - Navigate back to the root directory and start the server, **foreman start -p 3000**
-- Now you're cooking with gas!
+- Both the Rails server and the React server will start.
 
 #### Component Architecture
     
