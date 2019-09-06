@@ -54,6 +54,7 @@ class CreateMoviePage extends Component  {
   render() {
     return (
       <form onChange={ this.onMovieFormChange } onSubmit={ this.onMovieFormSubmit }>
+        <h2>Create Movie Form</h2>
         <div>
           <label htmlFor="title">Movie Title: </label>
           <input
