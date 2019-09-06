@@ -3,18 +3,18 @@ import React from "react";
 const Movie = ({movie}) => {
 
   return (
-    <div className="Movie card">
+    <div className="column is-one-quarter-desktop is-half-tablet">
+      <div className="Movie card">
 
-      <div className="card-content">
-
-        <div className="media-content">
-          <p className="title is-4">{movie.title}</p>
-          <p className="subtitle is-6">{movie.year}</p>
-          <p className="subtitle is-6">{movie.director}</p>
-          <p className="subtitle is-6">{movie.plot}</p>
+        <div className="card-image">
+          <figure className="image is-3by4">
+            <img src={movie.poster} alt={movie.title} />
+          </figure>
         </div>
-      </div>
 
+
+
+      </div>
     </div>
   )
 

@@ -64,7 +64,40 @@ movies = Movie.create(
       plot: 'Clark Kent is an alien who as a child was evacuated from his dying world and came to Earth, living as a normal human. But when survivors of his alien home invade Earth, he must reveal himself to the world.',
       poster: 'https://m.media-amazon.com/images/M/MV5BMTk5ODk1NDkxMF5BMl5BanBnXkFtZTcwNTA5OTY0OQ@@._V1_SX300.jpg',
       website: 'http://manofsteel.warnerbros.com'
-    }
+    },
+    {
+      title: 'The Insider',
+      year: 1999,
+      director: 'Michael Mann',
+      runtime: '157 min',
+      genre: 'Biography, Drama, Thriller',
+      actors: 'Al Pacino, Russell Crowe, Christopher Plummer, Diane Venora',
+      plot: 'A research chemist comes under personal and professional attack when he decides to appear in a "60 Minutes" expose on Big Tobacco.',
+      poster: 'https://m.media-amazon.com/images/M/MV5BODg0YjAzNDQtOGFkMi00Yzk2LTg1NzYtYTNjY2UwZTM2ZDdkL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg',
+      website: 'http://www.theinsider-themovie.com'
+    },
+    {
+      title: 'The Queen',
+      year: 2006,
+      director: 'Stephen Frears',
+      runtime: '103 min',
+      genre: 'Biography, Drama, History',
+      actors: 'Helen Mirren, James Cromwell, Alex Jennings, Roger Allam',
+      plot: 'After the death of Princess Diana, Queen Elizabeth II struggles with her reaction to a sequence of events nobody could have predicted.',
+      poster: 'https://m.media-amazon.com/images/M/MV5BMTQ3NTMxODg1Ml5BMl5BanBnXkFtZTcwMjEyMjczMQ@@._V1_SX300.jpg',
+      website: 'http://www.thequeen-movie.com/'
+    },
+    {
+      title: 'Gosford Park',
+      year: 2001,
+      director: 'Robert Altman',
+      runtime: '131 min',
+      genre: 'Comedy, Drama, Mystery',
+      actors: 'Maggie Smith, Michael Gambon, Kristin Scott Thomas, Camilla Rutherford',
+      plot: 'The lives of upstairs guests and downstairs servants at a party in 1932 in a country house in England as they investigate a murder involving one of them.',
+      poster: 'https://m.media-amazon.com/images/M/MV5BYzM4YzlhZGMtYTI2Yi00OTY4LWE0MzctNDFlYTQ3YmFlOTBjXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg',
+      website: 'http://www.gosfordparkmovie.com'
+    },
   ]
 )
 

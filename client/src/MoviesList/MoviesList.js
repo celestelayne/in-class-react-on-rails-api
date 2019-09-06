@@ -10,7 +10,7 @@ const MoviesList = ({movies}) => {
   )
 
   return (
-    <div className="MoviesList">
+    <div className="MoviesList columns is-multiline">
       { movie }
     </div>
   )

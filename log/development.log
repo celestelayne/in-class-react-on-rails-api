@@ -1189,3 +1189,533 @@ Processing by MoviesController#index as HTML
 Completed 200 OK in 152ms (Views: 138.8ms | ActiveRecord: 2.9ms)
 
 
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:30:55 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (11.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 45ms (Views: 30.3ms | ActiveRecord: 11.1ms)
+
+
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (2756.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "in-class-react-on-rails-api_development"[0m
+  ↳ bin/rails:4
+  [1m[35m (162.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "in-class-react-on-rails-api_test"[0m
+  ↳ bin/rails:4
+  [1m[35m (651.9ms)[0m  [1m[35mCREATE DATABASE "in-class-react-on-rails-api_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (447.2ms)[0m  [1m[35mCREATE DATABASE "in-class-react-on-rails-api_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35mSQL (3.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (2.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "movies" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (26.7ms)[0m  [1m[35mCREATE TABLE "movies" ("id" bigserial primary key, "title" character varying, "year" integer, "director" character varying, "plot" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (4.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190220160228)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-06 02:31:31.275762"], ["updated_at", "2019-09-06 02:31:31.275762"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "movies" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE "movies" ("id" bigserial primary key, "title" character varying, "year" integer, "director" character varying, "plot" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190220160228)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-09-06 02:31:31.363333"], ["updated_at", "2019-09-06 02:31:31.363333"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Update (5.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-09-06 02:31:31.372988"], ["key", "environment"]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3603991181898122295)[0m
+  ↳ bin/rails:4
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddColumnsToMovie (20190906023519)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (4.7ms)[0m  [1m[35mALTER TABLE "movies" ADD "runtime" character varying[0m
+  ↳ db/migrate/20190906023519_add_columns_to_movie.rb:3
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "movies" ADD "genre" character varying[0m
+  ↳ db/migrate/20190906023519_add_columns_to_movie.rb:4
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "movies" ADD "actors" character varying[0m
+  ↳ db/migrate/20190906023519_add_columns_to_movie.rb:5
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "movies" ADD "poster" character varying[0m
+  ↳ db/migrate/20190906023519_add_columns_to_movie.rb:6
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "movies" ADD "website" character varying[0m
+  ↳ db/migrate/20190906023519_add_columns_to_movie.rb:7
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190906023519"]]
+  ↳ bin/rails:4
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3603991181898122295)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (2.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "director", "plot", "created_at", "updated_at", "runtime", "genre", "actors", "poster", "website") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Green Book"], ["year", 2018], ["director", "Peter Farrelly"], ["plot", "A working-class Italian-American bouncer becomes the driver of an African-American classical pianist on a tour of venues through the 1960s American South."], ["created_at", "2019-09-06 02:36:27.441566"], ["updated_at", "2019-09-06 02:36:27.441566"], ["runtime", "130 min"], ["genre", "Biography, Comedy, Drama, Music"], ["actors", "Viggo Mortensen, Mahershala Ali, Linda Cardellini, Sebastian Maniscalco"], ["poster", "https://m.media-amazon.com/images/M/MV5BYzIzYmJlYTYtNGNiYy00N2EwLTk4ZjItMGYyZTJiOTVkM2RlXkEyXkFqcGdeQXVyODY1NDk1NjE@._V1_SX300.jpg"], ["website", "https://www.uphe.com/movies/green-book"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "director", "plot", "created_at", "updated_at", "runtime", "genre", "actors", "poster", "website") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "The Lord of the Rings: The Fellowship of the Ring"], ["year", 2001], ["director", "Peter Jackson"], ["plot", "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron."], ["created_at", "2019-09-06 02:36:27.446869"], ["updated_at", "2019-09-06 02:36:27.446869"], ["runtime", "178 min"], ["genre", "Adventure, Drama, Fantasy"], ["actors", "Alan Howard, Noel Appleby, Sean Astin, Sala Baker"], ["poster", "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg"], ["website", "http://www.lordoftherings.net/film/trilogy/thefellowship.html"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "director", "plot", "created_at", "updated_at", "runtime", "genre", "actors", "poster", "website") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "The Matrix"], ["year", 1999], ["director", "Lana Wachowski, Lilly Wachowski"], ["plot", "A computer hacker learns about the true nature of his reality."], ["created_at", "2019-09-06 02:36:27.449619"], ["updated_at", "2019-09-06 02:36:27.449619"], ["runtime", "136 min"], ["genre", "Action, Sci-Fi"], ["actors", "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving"], ["poster", "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"], ["website", "http://www.whatisthematrix.com"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (1.0ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "director", "plot", "created_at", "updated_at", "runtime", "genre", "actors", "poster", "website") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Call Me By Your Name"], ["year", 2017], ["director", "Luca Guadagnino"], ["plot", "In 1980s Italy, a romance blossoms between a student and an older man."], ["created_at", "2019-09-06 02:36:27.452512"], ["updated_at", "2019-09-06 02:36:27.452512"], ["runtime", "132 min"], ["genre", "Drama, Romance"], ["actors", "Armie Hammer, Timothée Chalamet, Michael Stuhlbarg, Amira Casar"], ["poster", "https://m.media-amazon.com/images/M/MV5BNDk3NTEwNjc0MV5BMl5BanBnXkFtZTgwNzYxNTMwMzI@._V1_SX300.jpg"], ["website", "https://sonyclassics.com/callmebyyourname/"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "director", "plot", "created_at", "updated_at", "runtime", "genre", "actors", "poster", "website") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Man of Steel"], ["year", 2013], ["director", "Zack Snyder"], ["plot", "Clark Kent is an alien who as a child was evacuated from his dying world and came to Earth, living as a normal human. But when survivors of his alien home invade Earth, he must reveal himself to the world."], ["created_at", "2019-09-06 02:36:27.456594"], ["updated_at", "2019-09-06 02:36:27.456594"], ["runtime", "143 min"], ["genre", "Action, Adventure, Sci-Fi"], ["actors", "Henry Cavill, Amy Adams, Michael Shannon, Diane Lane"], ["poster", "https://m.media-amazon.com/images/M/MV5BMTk5ODk1NDkxMF5BMl5BanBnXkFtZTcwNTA5OTY0OQ@@._V1_SX300.jpg"], ["website", "http://manofsteel.warnerbros.com"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (6.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  ↳ db/seeds.rb:71
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:36:55 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/celestelayne/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 39ms (Views: 23.1ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:38:38 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 86ms (Views: 76.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/%7Bmovie.poster%7D" for 127.0.0.1 at 2019-09-05 22:38:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/%7Bmovie.poster%7D"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:38:50 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:39:14 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (2.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:41:09 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (8.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 99ms (Views: 84.2ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:41:56 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:42:31 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:42:40 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:42:59 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (3.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 22ms (Views: 16.1ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:43:23 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:43:52 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:44:38 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 62ms (Views: 49.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:45:01 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:46:17 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:46:23 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:46:59 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 22:49:35 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (2.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 182ms (Views: 171.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:05:12 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 39ms (Views: 31.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:05:21 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:06:58 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (4.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 86ms (Views: 69.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:07:19 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (3.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 389ms (Views: 368.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:08:03 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (20.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 243ms (Views: 186.3ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:08:27 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (3.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:08:49 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:09:00 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:09:16 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:09:24 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 65ms (Views: 57.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:09:34 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:09:55 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:10:02 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:10:09 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:11:12 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:12:25 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.8ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:12:30 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:13:09 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (2.7ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 109ms (Views: 92.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:14:27 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mMovie Load (1.9ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMovie Destroy (11.6ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMovie Destroy (0.5ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMovie Destroy (0.5ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMovie Destroy (0.5ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mMovie Destroy (0.5ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (6.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "director", "plot", "created_at", "updated_at", "runtime", "genre", "actors", "poster", "website") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Green Book"], ["year", 2018], ["director", "Peter Farrelly"], ["plot", "A working-class Italian-American bouncer becomes the driver of an African-American classical pianist on a tour of venues through the 1960s American South."], ["created_at", "2019-09-06 03:26:42.390801"], ["updated_at", "2019-09-06 03:26:42.390801"], ["runtime", "130 min"], ["genre", "Biography, Comedy, Drama, Music"], ["actors", "Viggo Mortensen, Mahershala Ali, Linda Cardellini, Sebastian Maniscalco"], ["poster", "https://m.media-amazon.com/images/M/MV5BYzIzYmJlYTYtNGNiYy00N2EwLTk4ZjItMGYyZTJiOTVkM2RlXkEyXkFqcGdeQXVyODY1NDk1NjE@._V1_SX300.jpg"], ["website", "https://www.uphe.com/movies/green-book"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "director", "plot", "created_at", "updated_at", "runtime", "genre", "actors", "poster", "website") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "The Lord of the Rings: The Fellowship of the Ring"], ["year", 2001], ["director", "Peter Jackson"], ["plot", "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron."], ["created_at", "2019-09-06 03:26:42.402129"], ["updated_at", "2019-09-06 03:26:42.402129"], ["runtime", "178 min"], ["genre", "Adventure, Drama, Fantasy"], ["actors", "Alan Howard, Noel Appleby, Sean Astin, Sala Baker"], ["poster", "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg"], ["website", "http://www.lordoftherings.net/film/trilogy/thefellowship.html"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "director", "plot", "created_at", "updated_at", "runtime", "genre", "actors", "poster", "website") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "The Matrix"], ["year", 1999], ["director", "Lana Wachowski, Lilly Wachowski"], ["plot", "A computer hacker learns about the true nature of his reality."], ["created_at", "2019-09-06 03:26:42.405408"], ["updated_at", "2019-09-06 03:26:42.405408"], ["runtime", "136 min"], ["genre", "Action, Sci-Fi"], ["actors", "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving"], ["poster", "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"], ["website", "http://www.whatisthematrix.com"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (2.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "director", "plot", "created_at", "updated_at", "runtime", "genre", "actors", "poster", "website") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Call Me By Your Name"], ["year", 2017], ["director", "Luca Guadagnino"], ["plot", "In 1980s Italy, a romance blossoms between a student and an older man."], ["created_at", "2019-09-06 03:26:42.408933"], ["updated_at", "2019-09-06 03:26:42.408933"], ["runtime", "132 min"], ["genre", "Drama, Romance"], ["actors", "Armie Hammer, Timothée Chalamet, Michael Stuhlbarg, Amira Casar"], ["poster", "https://m.media-amazon.com/images/M/MV5BNDk3NTEwNjc0MV5BMl5BanBnXkFtZTgwNzYxNTMwMzI@._V1_SX300.jpg"], ["website", "https://sonyclassics.com/callmebyyourname/"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "director", "plot", "created_at", "updated_at", "runtime", "genre", "actors", "poster", "website") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Man of Steel"], ["year", 2013], ["director", "Zack Snyder"], ["plot", "Clark Kent is an alien who as a child was evacuated from his dying world and came to Earth, living as a normal human. But when survivors of his alien home invade Earth, he must reveal himself to the world."], ["created_at", "2019-09-06 03:26:42.415384"], ["updated_at", "2019-09-06 03:26:42.415384"], ["runtime", "143 min"], ["genre", "Action, Adventure, Sci-Fi"], ["actors", "Henry Cavill, Amy Adams, Michael Shannon, Diane Lane"], ["poster", "https://m.media-amazon.com/images/M/MV5BMTk5ODk1NDkxMF5BMl5BanBnXkFtZTcwNTA5OTY0OQ@@._V1_SX300.jpg"], ["website", "http://manofsteel.warnerbros.com"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "director", "plot", "created_at", "updated_at", "runtime", "genre", "actors", "poster", "website") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "The Insider"], ["year", 1999], ["director", "Michael Mann"], ["plot", "A research chemist comes under personal and professional attack when he decides to appear in a \"60 Minutes\" expose on Big Tobacco."], ["created_at", "2019-09-06 03:26:42.418749"], ["updated_at", "2019-09-06 03:26:42.418749"], ["runtime", "157 min"], ["genre", "Biography, Drama, Thriller"], ["actors", "Al Pacino, Russell Crowe, Christopher Plummer, Diane Venora"], ["poster", "https://m.media-amazon.com/images/M/MV5BODg0YjAzNDQtOGFkMi00Yzk2LTg1NzYtYTNjY2UwZTM2ZDdkL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg"], ["website", "http://www.theinsider-themovie.com"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "director", "plot", "created_at", "updated_at", "runtime", "genre", "actors", "poster", "website") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "The Queen"], ["year", 2006], ["director", "Stephen Frears"], ["plot", "After the death of Princess Diana, Queen Elizabeth II struggles with her reaction to a sequence of events nobody could have predicted."], ["created_at", "2019-09-06 03:26:42.421455"], ["updated_at", "2019-09-06 03:26:42.421455"], ["runtime", "103 min"], ["genre", "Biography, Drama, History"], ["actors", "Helen Mirren, James Cromwell, Alex Jennings, Roger Allam"], ["poster", "https://m.media-amazon.com/images/M/MV5BMTQ3NTMxODg1Ml5BMl5BanBnXkFtZTcwMjEyMjczMQ@@._V1_SX300.jpg"], ["website", "http://www.thequeen-movie.com/"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mMovie Create (1.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "director", "plot", "created_at", "updated_at", "runtime", "genre", "actors", "poster", "website") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Gosford Park"], ["year", 2001], ["director", "Robert Altman"], ["plot", "The lives of upstairs guests and downstairs servants at a party in 1932 in a country house in England as they investigate a murder involving one of them."], ["created_at", "2019-09-06 03:26:42.424253"], ["updated_at", "2019-09-06 03:26:42.424253"], ["runtime", "131 min"], ["genre", "Comedy, Drama, Mystery"], ["actors", "Maggie Smith, Michael Gambon, Kristin Scott Thomas, Camilla Rutherford"], ["poster", "https://m.media-amazon.com/images/M/MV5BYzM4YzlhZGMtYTI2Yi00OTY4LWE0MzctNDFlYTQ3YmFlOTBjXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"], ["website", "http://www.gosfordparkmovie.com"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  ↳ db/seeds.rb:104
+Started GET "/movies" for 127.0.0.1 at 2019-09-05 23:26:58 -0400
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/controllers/movies_controller.rb:6
+Completed 200 OK in 75ms (Views: 40.0ms | ActiveRecord: 1.5ms)
+
+

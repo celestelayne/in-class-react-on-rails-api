@@ -1,6 +1,8 @@
 import React, { Component } from "react"
 import { Switch, Route } from "react-router-dom"
 
+import Navbar from "../Navbar/Navbar"
+
 import MoviesList from "../MoviesList/MoviesList"
 import CreateMoviePage from "../CreateMoviePage/CreateMoviePage"
 
@@ -41,6 +43,8 @@ class App extends Component {
 
     return (
       <div className="container App">
+        <Navbar />
+
         <Switch>
           <Route
             exact path="/"
